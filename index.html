@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#box{
+		width: 1200px;
+		height: 450px;
+		display: flex;
+		border:1px solid blue;
+		position: relative;
+		overflow: hidden;
+	}
+	.t1{
+		width:600px;
+		height:450px;
+    background-image:url('images/1.jpg');
+    position: absolute;
+    left:-150px;
+	}
+	.t2{
+		width:600px;
+		height:450px;
+    background-image:url('images/2.jpg');
+    position: absolute;
+    left:300px;
+	}
+	.t3{
+		width:600px;
+		height:450px;
+    background-image:url('images/3.jpg');
+    position: absolute;
+    left:600px;
+	}
+	.t4{
+		width:600px;
+		height:450px;
+    background-image:url('images/4.jpg');
+    position: absolute;
+    left:900px;
+	}
+
+</style>
+<body>
+	<div id="box">
+	<div class="t1"></div>
+	<div class="t2"></div>
+	<div class="t3"></div>
+	<div class="t4"></div>
+	</div>
+	<script>
+		var box=document.getElementById('box');
+		var t1=box.getElementsByClassName('t1')[0];
+		var t2=box.getElementsByClassName('t2')[0];
+		var t3=box.getElementsByClassName('t3')[0];
+		var t4=box.getElementsByClassName('t4')[0];
+    t1.onmouseover=function(){
+    	t1.style.left=0+'px';
+    	t2.style.left=600+'px';
+    	t3.style.left=800+'px';
+    	t4.style.left=1000+'px';
+    }
+     t2.onmouseover=function(){
+    	t1.style.left=-400+'px';
+    	t2.style.left=200+'px';
+    	t3.style.left=800+'px';
+    	t4.style.left=1000+'px';
+    }
+     t3.onmouseover=function(){
+    	t1.style.left=-400+'px';
+    	t2.style.left=200+'px';
+    	t3.style.left=400+'px';
+    	t4.style.left=1000+'px';
+    }
+     t4.onmouseover=function(){
+    	t1.style.left=-400+'px';
+    	t2.style.left=200+'px';
+    	t3.style.left=400+'px';
+    	t4.style.left=600+'px';
+    }
+
+
+
+	</script>
+</body>
+</html>
